@@ -54,3 +54,7 @@ En caso de que la performance sea esencial para la aplicacion, testear los endpo
 
 `npm i @nestjs/mapped-types` to help us to autovalidates dto types
 
+### TypeORM
+`npm i @nestjs/typeorm pg`
+
+synchronize: true is only for development
