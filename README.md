@@ -46,7 +46,11 @@ puedo tener otras similares como /entities y /interfaces
 The validationPipe provides a convenient way of enforcing validation rules for all incoming client payloads.
 
 `app.useGlobalPipes(new ValidationPipe())`
+transfor: true 
+Tenga en cuenta que esta característica puede afectar ligeramente el rendimiento.
+En caso de que la performance sea esencial para la aplicacion, testear los endpoints con dicha configuracion.
 
 `npm i class-validator class-transformer`
 
 `npm i @nestjs/mapped-types` to help us to autovalidates dto types
+

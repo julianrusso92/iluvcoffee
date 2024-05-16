@@ -1,5 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { Coffee } from './entities/coffee.entity';
+import { UpdateCoffeeDto } from './dto/update-coffee.dto';
 
 @Injectable()
 export class CoffeesService {
@@ -16,9 +17,9 @@ export class CoffeesService {
     return this.coffees;
   }
 
-  findOne(id: string) {
+  findOne(id: number) {
     // throw 'Method not implemented.';
-    const coffee = this.coffees.find((coffee) => coffee.id === +id);
+    const coffee = this.coffees.find((coffee) => coffee.id === id);
     if (!coffee) {
       throw new NotFoundException(`Coffee #${id} not found`);
       //   throw new HttpException(`Coffee #${id} not found`, HttpStatus.NOT_FOUND);
@@ -31,8 +32,8 @@ export class CoffeesService {
     return createCoffeeDto;
   }
 
-  update(id: string, updateCoffeeDto: any) {
-    const existingCoffee = this.findOne(id);
+  update(id: string, updateCoffeeDto: UpdateCoffeeDto) {
+    const existingCoffee = this.findOne(+id);
     if (existingCoffee) {
       //Update existing entity
     }

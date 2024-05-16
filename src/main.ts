@@ -8,6 +8,7 @@ async function bootstrap() {
     new ValidationPipe({
       whitelist: true, // remove non whitelisted properties
       forbidNonWhitelisted: true, // throw an error for non whitelisted properties
+      transform: true, // transform the data to the expected type
     }),
   );
   await app.listen(3000);
