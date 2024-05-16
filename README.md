@@ -35,6 +35,7 @@ devuelve esto
 ### DTO
 Is an object that is used to encapsulate data and send it from one application to another.
 Help us to define the interfaces or input and output within our system.
+Dtos are just simple objects they don't contain any business logic, methods or anything that requires testing.
 `nest g class coffees/dto/create-coffee.dto --no-spec`
 
 se pone dentro de carpeta
