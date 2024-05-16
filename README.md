@@ -41,3 +41,12 @@ Dtos are just simple objects they don't contain any business logic, methods or a
 se pone dentro de carpeta
 /dto
 puedo tener otras similares como /entities y /interfaces
+
+### Pipes 
+The validationPipe provides a convenient way of enforcing validation rules for all incoming client payloads.
+
+`app.useGlobalPipes(new ValidationPipe())`
+
+`npm i class-validator class-transformer`
+
+`npm i @nestjs/mapped-types` to help us to autovalidates dto types
