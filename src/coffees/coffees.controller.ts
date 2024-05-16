@@ -11,6 +11,7 @@ import {
 import { CoffeesService } from './coffees.service';
 import { CreateCoffeeDto } from './dto/create-coffee.dto';
 import { UpdateCoffeeDto } from './dto/update-coffee.dto';
+import { log } from 'console';
 
 @Controller('coffees')
 export class CoffeesController {
@@ -40,6 +41,7 @@ export class CoffeesController {
   // @HttpCode(HttpStatus.GONE)
   // create(@Body('name') body) {
   create(@Body() createCoffeeDto: CreateCoffeeDto) {
+    log(createCoffeeDto);
     return this.coffeesService.create(createCoffeeDto);
   }
 
